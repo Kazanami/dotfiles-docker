@@ -1,0 +1,13 @@
+ZSH_MODULE="~/.zshrc_module.d"
+
+# Default Module
+for file in ${ZSH_MODULE}/**/*.zsh; do
+    source $file
+done
+
+# Original Module
+for file in ${ZSH_MODULE}/**/*.zsh.local; do
+    source $file
+done
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
